@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+        <title>Class Registration</title>
+        <script type="text/javascript" src="./js/contact_me.js"></script>
+        <script src="../Alternative_Project_Layout/js/jquery.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('#sessions').hide();
+            $('#classType1').click(function(){
+                $('#sessions').show();
+            });
+            $('#classType2').click(function(){
+                $('#sessions').hide();
+            });            
+
+        });
+        </script>
+        <!--TRANSLATE BUTTON-->
+        <script type="text/javascript" src = "js/translate_button.js"></script>
+
+
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="Team Brackets, Lehman College" content="">
+
+        <title>Alba Business Solutions, Inc.</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/agency.css" rel="stylesheet">
+        <link rel = "stylesheet" type = "text/css" href = "css/style.css">
+
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>    
+        
+    </head>
+
+    <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top nav_overlay">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle right" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html#page-top"><img src = "img/Logo/logo.png" style = "position:relative;top:-11px;height:40px;vertical-align:middle;" align = "left">Alba Business Solutions, Inc.</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="index.html#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html#income-tax">Income Tax</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html#addtl-services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html#classes">Classes</a>
+                    </li>
+                    <!--
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                    -->
+                    <li>
+                        <a class="page-scroll" href="index.html#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a class = "translate_nav_option">Translate</a>
+                    </li>
+                        <!--TRANSLATE BOX-->
+                        <div class = "translate">
+                            <span id = "close">Hide</span>
+                            <noscript>Javascript is required to use <a href="http://gtranslate.net/">GTranslate</a> <a href="http://gtranslate.net/">multilingual website</a> and <a href="http://gtranslate.net/">translation delivery network</a></noscript>
+
+                            <div id="google_translate_element2" class = "hide"></div>
+
+                            <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+                            <select id="cd-dropdown" name="cd-dropdown" onchange="doGTranslate(this);" class = "btn translate-btn">
+                                <option value="en|en" class = "translate_options">English</option>
+                                <option value="en|es" class = "translate_options">Spanish</option>
+                            </select>
+
+                            </div>
+                        </div>                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+    <!-- This frame is used to send the post request without redirecting to the macros/service script service page.-->
+    <iframe name="hidden_iframe" style="display: none">
+        <html>
+            <head></head>
+            <body></body>
+        </html>
+    </iframe>
+
+    
+        <section id = "registration">
+        <div class = "container">
+          <form action="https://script.google.com/macros/s/AKfycbwRn01Eqdl9oGajAevLlhcfmFRjA0ap2k61o_S32-0VLWTo0oGT/exec" id="classRegistration" name="classRegistration" method="post" target="hidden_iframe" onsubmit = "redirectReg" class = "form-group">
+           <!--//https://script.google.com/macros/s/AKfycbxqiPL35IEGbH7huvWMkKcKq62h_dCQp4fDJGqWKNb3-qPrlM4a/exec - production
+           //https://script.google.com/macros/s/AKfycbx0VsrNr5iuw6huCmjtds1BoXqU0kXodA1zC2OVfhKy/dev - development-->
+                <h1>Class Size is Limited! Register Today!</h1><br>
+
+                <fieldset>
+                    <legend><h3>Contact Information</h3></legend>
+                    <div class = "row">
+                        <div class = "col-md-6">
+                            <label id="fn_label" name="fn_label" for="fname">First Name *</label>
+                            <input class="form-control" id="fName" name="fName" required=true>
+                        </div>
+
+                        <div class = "col-md-6">
+                            <label id="ln_label" name="ln_label" for="lname">Last Name *</label>
+                            <input class="form-control" id="lName" name="lName" required=true>
+                        </div>
+                    </div>
+
+
+                    <div class = "row">
+                        <div class = "col-md-12">
+                            <label id="company_label" name="company_label" for="company">Company</label>
+                            <input class="form-control" id="company" name="company" >                        
+                        </div>
+                    </div>
+
+                    <div class = "row">
+                        <div class = "col-md-12">
+                            <label id="address_label" name="address_label" for="address">Address</label>
+                            <input class="form-control" id="address" name="address">                          
+                        </div>
+                    </div>
+
+                    
+                    <div class = "row">
+                        <div class = "col-md-4">
+                            <label id="city_label" name="city_label" for="city">City</label>
+                            <input class="form-control" id="city" name="city">                   
+                        </div>
+                        <div class = "col-md-4">
+                            <label id="state_label" name="state_label" for="state">State</label>
+                            <input class="form-control" id="state" name="state">                         
+                        </div>
+                        <div class = "col-md-4">
+                            <label id="zip_label" name="zip_label" for="zip">Zip</label>
+                            <input class="form-control" id="zip" name="zip">                     
+                        </div>
+                    </div>
+
+                    <div class = "row">
+                        <div class = "col-md-12">
+                            <label id="phone_label" name="phone_label" for="phone">Phone *</label>
+                            <input class="form-control" id="phone" name="phone" type= "text" required=true>
+                        </div>
+                    </div>
+
+                    <div class = "row">
+                        <div class = "col-md-12">
+                            <label id="email_label" name="email_label" for="email">Email *</label>
+                            <input class="form-control" id="email" name="email" type="email" required=true>                       
+                        </div>
+                    </div>
+
+                    <div class = "row">
+                        <div class = "col-md-6">
+                            <label id="occupation_label" name="occupation_label" for="occupation">Occupation</label>
+                            <input class="form-control" id="occupation" name="occupation">            
+                        </div>
+                        <div class="col-md-6">
+                            <label id="type_label" name="type_label" for="classType">Class Type</label><br>   
+                            <select id="classType" name="classType" class = "form-control" required=true>
+                                <option></option>
+                                <option>Tax Preparation - Session 1</option>
+                                <option>Tax Preparation - Session 2</option>
+                                <option>Notary Public</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                </fieldset>
+
+                <!--
+                <fieldset>
+                
+                    <legend><h3>Class Type</h3></legend>
+                    <div class = "radio">
+                        <label><input id="classType1" name="classType" type="radio">Tax Preparation</label>
+                    </div>
+                    <div id = "sessions">
+                        <div class = "radio indent">
+                            <label><input id="session1" name="session" type="radio" >Session 1</label>
+                        </div>
+                        <div class = "radio indent">
+                            <label><input id="session2" name="session" type="radio" >Session 2</label>
+                        </div>
+                    </div>
+                    <div class = "radio">
+                        <label><input id="classType2" name="classType" type="radio" onclick="clearTaxSelection()">Notary Public</label>
+                    </div>
+                                
+                </fieldset>-->
+                
+                
+                    <!--<div class="col-md-6">  
+                        <label = id="type_label" name="type_label">Class Type</label>   
+                        <select id="classType" name="classType">
+                           <option></option>
+                            <option>Tax Preparation - Session 1</option>
+                            <option>Tax Preparation - Session 2</option>
+                            <option>Notary Public</option>
+                        </select>
+                    
+                <!--</div>-->
+
+                <div class = "checkbox">
+                    <label><input id = "newsletter" name="newsletter" type="checkbox" checked="checked">*Add me to your Newsletter to ensure I receive the latest tax updates and emails from LTPA.</label>
+                </div>
+                <br><br><br>
+
+                <div class="col-lg-12 text-center">
+                    <button class = "btn btn-xl " id="register" name="register" type="button" onclick="validateFormB(this.form)">Complete Registration</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+        <title>Schedule an Appointment</title>
+        <script type="text/javascript" src="./js/contact_me.js"></script>
+        <script src="../Alternative_Project_Layout/js/jquery.js"></script>
+        <!--TRANSLATE BUTTON-->
+        <script type="text/javascript" src = "js/translate_button.js"></script>
+        
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="Team Brackets, Lehman College" content="">
+
+        <title>Alba Business Solutions, Inc.</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/agency.css" rel="stylesheet">
+        <link rel = "stylesheet" type = "text/css" href = "css/style.css">
+
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>    
+        
+    </head>
+
+    <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top nav_overlay">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle right" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html#page-top"><img src = "img/Logo/logo.png" style = "position:relative;top:-11px;height:40px;vertical-align:middle;" align = "left">Alba Business Solutions, Inc.</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="index.html#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html#income-tax">Income Tax</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html#addtl-services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html#classes">Classes</a>
+                    </li>
+                    <!--
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                    -->
+                    <li>
+                        <a class="page-scroll" href="index.html#contact">Contact</a>
+                    </li>
+                    <li>
+                        <a class = "translate_nav_option">Translate</a>
+                    </li>
+                
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    
+    <!--TRANSLATE BOX-->
+    <div class = "translate">
+        <span id = "close">Hide</span>
+        <noscript>Javascript is required to use <a href="http://gtranslate.net/">GTranslate</a> <a href="http://gtranslate.net/">multilingual website</a> and <a href="http://gtranslate.net/">translation delivery network</a></noscript>
+
+        <div id="google_translate_element2" class = "hide"></div>
+
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+        <select id="cd-dropdown" name="cd-dropdown" onchange="doGTranslate(this);" class = "btn translate-btn">
+            <option value="en|en" class = "translate_options">English</option>
+            <option value="en|es" class = "translate_options">Spanish</option>
+        </select>
+
+        </div>
+    </div>            
+
+    <!-- This frame is used to send the post request without redirecting to the macros/service script service page.-->
+    <iframe name="hidden_iframe" style="display: none">
+        <html>
+            <head></head>
+            <body>
+                
+                <!--function redirectAppt();-->
+            </body>
+        </html>
+    </iframe>
+    
+    
+        <section id = "schedule">
+        <div class = "container">
+          
+          <form action="https://script.google.com/macros/s/AKfycbxXOqPnPE600oTH9MvHKyKB44RID_R-i9NyXPFQ0SMJGxKPDpbO/exec" id="apptSchedule" name="apptSchedule" method="post" target = "hidden_iframe" class = "form-group">
+           <!--//https://script.google.com/macros/s/AKfycbxqiPL35IEGbH7huvWMkKcKq62h_dCQp4fDJGqWKNb3-qPrlM4a/exec - production
+           //https://script.google.com/macros/s/AKfycbx0VsrNr5iuw6huCmjtds1BoXqU0kXodA1zC2OVfhKy/dev - development-->
+
+                <h1>Schedule an Appointment</h1><br>
+
+                <fieldset>
+                    <legend><h3>Contact Information</h3></legend>
+                    <div class = "row">
+                        <div class = "col-md-6">
+                            <label id="fn_label" name="fn_label" for="fname">First Name *</label>
+                            <input class="form-control" id="fName" name="fName" required=true></input>
+                        </div>
+
+                        <div class = "col-md-6">
+                            <label id="ln_label" name="ln_label" for="lname">Last Name *</label>
+                            <input class="form-control" id="lName" name="lName" required=true></input>
+                        </div>
+                    </div>
+
+
+                    <div class = "row">
+                        <div class = "col-md-12">
+                            <label id="phone_label" name="phone_label" for="phone">Phone *</label>
+                            <input class="form-control" id="phone" name="phone" type= "text" required=true></input>
+                        </div>
+                    </div>
+
+                    <div class = "row">
+                        <div class = "col-md-12">
+                            <label id="email_label" name="email_label" for="email">Email *</label>
+                            <input class="form-control" id="email" name="email" type="email" required=true></input>                          
+                        </div>
+                    </div>
+
+                    <div class = "row">
+                        <div class = "col-md-6">
+                            <label id = "date_label" name = "date_label" for = "apptDate">Date *</label>
+                            <input class = "form-control" id = "apptDate" name = "apptDate" type = "date" required=true>
+                        </div>
+                        <div class = "col-md-6">
+                            <label id = "time_label" name = "time_label" for = "apptTime">Time *</label>
+                            <input class = "form-control" id = "apptTime" name = "apptTime" type = "time" required=true>
+                        </div>
+                    </div>
+                </fieldset>
+
+               <div class = "checkbox">
+                    <label><input id = "newsletter" name="newsletter" type="checkbox" checked="checked">Add me to your Newsletter to ensure I receive the latest tax updates and emails from LTPA.</label>
+                </div>
+                <br><br><br>
+
+                <div class="col-lg-12 text-center">
+                    <button class = "btn btn-xl " id="scheduleAppt" name="scheduleAppt" type="button" onclick="validateFormA(this.form)">Schedule Appointment</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
+    
+    </body>
+
+</html>
